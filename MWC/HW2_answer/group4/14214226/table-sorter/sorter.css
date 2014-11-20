@@ -1,0 +1,27 @@
+table, th, td
+  {
+  	border-collapse:collapse;
+  border: 1px solid gray;
+  font-weight: bold;
+  }
+
+  thead {
+  	background: blue;
+  	color: white;
+  }
+
+  .alternate {
+  	background: gray;
+  }
+
+  thead th:hover {
+  	background-image: url(ascend.png);
+  	background-repeat: no-repeat;
+  	background-position: right;
+    background-color: #9dc6ef;
+  }
+
+  #staff {
+  	width: 469px;
+  }
+

@@ -1,0 +1,20 @@
+th {
+	background: blue;
+	color: white;
+	font-weight: bold;
+	background-position: right;
+	background:-repeat: no-repeat;
+}
+table, td, th {
+	border: solid 1px gray;
+	text-align: left;
+}
+table {
+    border-collapse: collapse;
+}
+table tr:nth-child(2) {
+	background: #B8B8B8;
+}
+#staff {
+	width: 400px;
+}

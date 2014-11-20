@@ -1,0 +1,31 @@
+table {
+	border-collapse: collapse;
+}
+table, td, th{
+	border:1px solid black;
+}
+
+th {
+	background-color: blue;
+	color: white;
+}
+
+.alternate {
+	background-color: lightblue;
+}
+
+.hover1 {
+	background-color: lightblue;
+	background:url("ascend.png") right;
+	background-repeat: no-repeat;
+	color: blue;
+	overflow: hidden;
+}
+
+.hover2 {
+	background-color: lightblue;
+	background:url("descend.png") right;
+	background-repeat: no-repeat;
+	color: blue;
+	overflow: hidden;	
+}

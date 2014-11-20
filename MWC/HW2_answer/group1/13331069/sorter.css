@@ -1,0 +1,28 @@
+th,td {
+	border: solid 1px gray;
+}
+table {
+	border-collapse: collapse;
+}
+table>thead {
+	background-color: #3333CC;
+}
+.alternate{
+	background-color: #DEDECE;
+}
+.colorrise {
+	background-color: #CCCCFF;
+	background-image: url("descend.png");
+	background-position: right;
+	background-repeat: no-repeat;
+}
+.colordown {
+	background-color: #CCCCFF;
+	background-image: url("ascend.png");
+	background-position: right;
+	background-repeat: no-repeat;
+}
+.origincolor {
+	background-color: #3333CC;
+	background-image: none;
+}

@@ -1,0 +1,26 @@
+body {
+	font-family: Verdana ,Tahoma,sans-serif;
+
+}
+table thead {
+	background-color: rgba(25,25,112,1);
+	color: white;
+	font-weight: bold;
+	text-align: left;
+
+}
+
+table
+{
+border-collapse:collapse;
+}
+table,th, td
+{
+border: 2px solid gray;
+}
+.alternate {
+	background-color: rgba(192,192,192,0.5);
+}
+table *{
+	padding: 5px;
+}

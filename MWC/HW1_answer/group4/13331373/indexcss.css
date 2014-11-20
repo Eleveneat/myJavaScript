@@ -1,0 +1,473 @@
+#bottom-positioner{
+	width: 400px;
+	height: 400px;
+	margin: auto auto;
+}
+#button:hover{
+	width: 50px; 
+	height: 50px; 
+	-moz-border-radius: 25px; 
+	-webkit-border-radius: 25px; 
+	border-radius: 25px;	
+	margin: 295px 175px 55px 175px;
+	background-image: url('assets/images/atplus_green.png');
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: center;
+	background-color: rgba(48, 63, 159, 1);
+}
+#button:hover #info-bar{
+	visibility: visible;
+	width: 120px; 
+	height: 120px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 60px; 
+	-webkit-border-radius: 60px; 
+	border-radius: 60px; 
+	position: relative;
+	left: -40px;
+	top: -130px;
+}
+#button:hover #control-ring-container{
+	visibility: visible;
+	width: 150px; 
+	height: 120px; 
+	position: relative;
+	top: -140px;
+	left: -50px;
+}
+#button:hover .info{
+	visibility: visible;
+	width: 80px; 
+	height: 71px;
+	position: relative;
+	top: 15px;
+}
+#button:hover .people{
+	visibility: visible;
+	width: 22px;
+}
+#button:hover .numofp{
+	visibility: visible;
+	font-size: 20px;
+	font-weight: bold;
+}
+#button:hover .comment{
+	visibility: visible;
+	width: 22px;
+}
+#button:hover .numofc{
+	visibility: visible;
+	font-size: 40px;
+	font-weight: bold;
+}
+#button:hover .post{
+	visibility: visible;
+	width: 22px;
+}
+#button:hover .numofpost{
+	visibility: visible;
+	font-size: 20px;
+	color: #079E6E;
+	font-weight: bold;
+}
+#button:hover .like{
+	visibility: visible;
+	width: 22px;
+}
+#button:hover .numofl{
+	visibility: visible;
+	font-size: 20px;
+	color: #079E6E;
+	font-weight: bold;
+}
+#button:hover .mask_button{
+	visibility: visible;
+	width: 30px; 
+	height: 30px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+	position: absolute;
+	left: 10px;
+	top: 0px;
+}
+#button:hover .mask{
+	visibility: visible;
+	width: 24px;
+	position: relative;
+	right: -2px;
+	bottom: -3px;
+}
+#button:hover .history_button{
+	visibility: visible;
+	width: 30px; 
+	height: 30px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px; 
+	position: absolute;
+	left: 0px;
+	top: 30px;
+}
+#button:hover .history{
+	visibility: visible;
+	position: relative;
+	right: -2px;
+	bottom: -3px;
+	width: 24px;
+}
+#button:hover .message_button{
+	visibility: visible;
+	display: inline-block;
+	width: 30px; 
+	height: 30px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+	position: absolute;
+	left: 10px;
+	top: 60px;
+}
+#button:hover .message{
+	visibility: visible;
+	width: 24px;
+	position: relative;
+	bottom: -3px;
+	right: -2px;
+}
+#button:hover .unread{
+	visibility: visible;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: red; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border-radius: 10px; 
+	text-align: center;
+	font-size: 18px;
+	position: absolute;
+	left: 28px;
+	top: 52px;
+}
+#button:hover .setting_button{
+	display: inline-block;
+	visibility: visible;
+	width: 30px; 
+	height: 30px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+	position: absolute;
+	left: 40px;
+	top: 78px;
+}
+#button:hover .setting{
+	visibility: visible;
+	position: relative;
+	bottom: -3px;
+	right: -2px;
+	width: 24px;
+}
+#button:hover .sign_button{
+	display: inline-block;
+	visibility: visible;
+	width: 30px; 
+	height: 30px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px; 
+	position: absolute;
+	left: 73px;
+	top: 74px;
+}
+#button:hover .signin{
+	visibility: visible;
+	position: relative;
+	bottom: -3px;
+	right: -2px;
+	width: 24px;
+}
+
+#button{
+	width: 30px; 
+	height: 30px; 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;	
+	margin: 305px 185px 65px 185px;
+	background-image: url('assets/images/atplus_white.png');
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: center;
+	background-color: rgba(135, 206, 235, 1);
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+#info-bar{
+	visibility: hidden;
+	width: 2px; 
+	height: 2px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 60px; 
+	-webkit-border-radius: 60px; 
+	border-radius: 60px; 
+	position: relative;
+	top: 14px;
+	left: 14px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+#control-ring-container{
+	visibility: hidden;
+	width: 2px; 
+	height: 2px; 
+	position: relative;
+	top: 12px;
+	left: 14px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.info{
+	visibility: hidden;
+	width: 2px; 
+	height: 2px;
+	margin: auto;
+	position: relative;
+	top: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.people{
+	visibility: hidden;
+	width: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.numofp{
+	visibility: hidden;
+	font-size: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.comment{
+	visibility: hidden;
+	width: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.numofc{
+	visibility: hidden;
+	font-size: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.post{
+	visibility: hidden;
+	width: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.numofpost{
+	visibility: hidden;
+	color: #079E6E;
+	font-weight: bold;
+	font-size: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.like{
+	visibility: hidden;
+	width: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.numofl{
+	visibility: hidden;
+	color: #079E6E;
+	font-weight: bold;
+	font-size: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.mask_button{
+	visibility: hidden;
+	width: 0px; 
+	height: 0px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.mask{
+	visibility: hidden;
+	position: relative;
+	right: 0px;
+	width: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.history_button{
+	visibility: hidden;
+	width: 0px; 
+	height: 0px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px; 
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.history{
+	visibility: hidden;
+	width: 0px;
+	position: relative;
+	bottom: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.message_button{
+	visibility: hidden;
+	display: inline-block;
+	width: 0px; 
+	height: 0px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.message{
+	visibility: hidden;
+	width: 0px;
+	position: relative;
+	bottom: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.unread{
+	visibility: hidden;
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	background-color: red; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border-radius: 10px; 
+	text-align: center;
+	font-size: 0px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.setting_button{
+	visibility: hidden;
+	width: 0px; 
+	height: 0px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.setting{
+	visibility: hidden;
+	width: 0px;
+	position: relative;
+	right: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.sign_button{
+	visibility: hidden;
+	width: 0px; 
+	height: 0px; 
+	background-color: rgba(105, 105, 105, 0.6); 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+.signin{
+	visibility: hidden;
+	width: 0px;
+	position: relative;
+	right: 0px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}

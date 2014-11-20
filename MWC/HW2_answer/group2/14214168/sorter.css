@@ -1,0 +1,22 @@
+*{
+    font-family: verdana, arial, sans-serif;
+}
+table,th,td
+{
+    border: solid 1px;
+    border-collapse:collapse;
+    padding: 0.5em 1.5em 0.5em 0.5em;
+}
+th
+{
+ background-color:#0B49DD;
+}
+th:hover
+{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 121, 0.5);
+    background-position: center right;
+    background-image: url(ascend.png);
+    background-repeat: no-repeat;
+}
