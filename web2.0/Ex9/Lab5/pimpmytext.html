@@ -10,6 +10,7 @@
 			Please don't remove this link or change the following URL; leave it as-is!
 		-->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="pimpmytext.js"></script>
 
 		<!-- link to your script file here -->
 
@@ -22,6 +23,25 @@
 		</div>
 
 		<!-- Your UI controls go here -->
+		<form action="/">
+			<fieldset>
+				<legend>Text</legend>
+				<textarea id="Text" class="Text" name="Text" cols="30" rows="4"></textarea>
+			</fieldset>
+			<fieldset>
+				<legend>Pimpification</legend>
+				<div>
+					<input type="button" name="BiggerPimpin" value="Bigger Pimpin!" id="BiggerPimpin">
+				</div>
+				<div>
+					<input type="checkbox" name="Bling" value="Bling" id="Bling">
+					<label for="Bling">Bling</label>
+				</div>
+				<div>
+					<input type="button" name="Snoopify" value="Snoopify" id="Snoopify">
+				</div>
+			</fieldset>
+		</form>
 
 	</body>
 </html>

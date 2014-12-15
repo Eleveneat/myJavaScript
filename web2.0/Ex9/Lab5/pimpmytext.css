@@ -3,6 +3,7 @@ body {
 	font-size: 12pt;
 	margin-left: 20px;
 	margin-right: 20px;
+	/*background-image: url(hundred-dollar-bill.jpg);*/
 }
 
 #header {
@@ -25,4 +26,23 @@ legend {
 #t1{
 	font-family: monospace;
 	font-size: 12pt;
+}
+
+#Text {
+	font-size: 12pt;
+	border: 2px inset rgba(192,192,192,1);
+}
+/*.BiggerText {
+	font-size: 24pt;
+}*/
+.styleText {
+	color: green;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+	border: 2px inset rgba(192,192,192,1);
+	/*text-decoration: blink;*/
+}
+#BiggerPimpin {
+	border: 2px outset rgba(192,192,192,1);
 }
