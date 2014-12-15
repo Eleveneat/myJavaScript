@@ -1,3 +1,12 @@
+/*
+*    Filename: pimpmytext.css
+*    Description: Lab5.
+*    Last modified: 2014-12-15 19:58
+*
+*    Created by Eleven on 2014-12-15
+*    Email: eleveneat@gmail.com
+*    Copyright (C) 2014 Eleven. All rights reserved.
+*/
 body {
 	font-family: "Arial", "Helvetica", sans-serif;
 	font-size: 12pt;
@@ -28,13 +37,12 @@ legend {
 	font-size: 12pt;
 }
 
+/*以下是我新增的样式*/
 #Text {
 	font-size: 12pt;
 	border: 2px inset rgba(192,192,192,1);
 }
-/*.BiggerText {
-	font-size: 24pt;
-}*/
+
 .styleText {
 	color: green;
 	font-weight: bold;
