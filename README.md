@@ -1,1 +1,1 @@
-Collecting my JS code.
+Collecting my JS files.
