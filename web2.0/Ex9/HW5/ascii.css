@@ -1,3 +1,13 @@
+/*
+*    Filename: ascii.css
+*    Description: None.
+*    Last modified: 2014-12-16 15:59
+*
+*    Created by Eleven on 2014-12-15
+*    Email: eleveneat@gmail.com
+*    Copyright (C) 2014 Eleven. All rights reserved.
+*/
+
 /* 
 CSE 190 M, Spring 2009, Marty Stepp
 style sheet for Homework 5: ASCIImation
@@ -54,15 +64,22 @@ h1 {
 	text-align: right;
 }
 
-/* your styles go here */
-
 #displayarea {
 	border: 0px;
-	font-size: 12pt;
 	font-weight: bold;
 	height: 400px;
 	width: 90%;
 	font-family:monospace,san-serif;
+}
+
+.smallfontsize_displayarea {
+	font-size: 7pt;
+}
+.mediumfontsize_displayarea {
+	font-size: 12pt;
+}
+.largefontsize_displayarea {
+	font-size: 24pt;
 }
 
 fieldset {

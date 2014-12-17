@@ -1,3 +1,13 @@
+<!-- 
+   Filename: ascii.html
+   Description: None.
+   Last modified: 2014-12-16 15:59
+
+   Created by Eleven on 2014-12-15
+   Email: eleveneat@gmail.com
+   Copyright (C) 2014 Eleven. All rights reserved.
+-->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<!-- by KenLee@2013 web2.0 course sysu -->
@@ -5,36 +15,32 @@
 	<head>
 		<title>ASCIImation</title>
 		<meta charset="utf-8"/>
-		<!-- instructor-provided JavaScript files; do not modify -->
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js" type="text/javascript"></script>
 		<script src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/5/animations.js" type="text/javascript"></script>
 
-		<!-- link to your files here -->
-		<link href="ascii.css" type="text/css" rel="stylesheet" /><!-- 样式文档 -->
+		<link href="ascii.css" type="text/css" rel="stylesheet" />
 		<link rel="icon" href="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/5/stickman.gif" type="image/x-gif" />
 		<script type="text/javascript" src="ascii.js"></script>
-		<!-- 添加你的javascript 文件-->
 		
 	</head>
 
 	<body>
 		<h1>SYSU SS ASCII Animation Viewer</h1>
 		
-		<!-- your controls should go here -->
 		<div id="display">
-			<textarea id="displayarea" rows="20" cols="80"></textarea>
+			<textarea id="displayarea" rows="20" cols="80" class="mediumfontsize_displayarea"></textarea>
 		</div>
 
 		<div>
 			<form action="/">
 				<fieldset>
 					<legend>Play Controls:</legend>
-					<input type="button" name="Start" value="Start" id="Start">
-					<input type="button" name="Stop" value="Stop" id="Stop">
+					<input type="button" name="start_btn" value="Start" id="start_btn">
+					<input type="button" name="stop_btn" value="Stop" id="stop_btn">
 				</fieldset>
 				<fieldset>
 					<legend>Animation:</legend>
-					<select name="Animation" id="Animation">
+					<select name="animation_select" id="animation_select">
 						<option value="Blank">Blank</option>
 						<option value="Exercise">Exercise</option>
 						<option value="Juggler">Juggler</option>
@@ -45,22 +51,22 @@
 				</fieldset>
 				<fieldset>
 					<legend>Size:</legend>
-					<input type="radio" name="radio" value="Small" id="Small"><label for="Small">Small</label>
-					<input type="radio" name="radio" value="Medium" id="Medium"><label for="Medium">Medium</label>
-					<input type="radio" name="radio" value="Large" id="Large"><label for="Large">Large</label>
+					<input type="radio" name="size_radio" value="Small" id="small_btn"><label for="small_btn">Small</label>
+					<input type="radio" name="size_radio" value="Medium" id="medium_btn"><label for="medium_btn">Medium</label>
+					<input type="radio" name="size_radio" value="Large" id="large_btn"><label for="large_btn">Large</label>
 				</fieldset>
 				<fieldset>
 					<legend>Speed:</legend>
-					<input type="checkbox" name="Turbo" value="Turbo" id="Turbo">
-					<label for="Turbo">Turbo</label>
+					<input type="checkbox" name="turbo" value="Turbo" id="turbo">
+					<label for="turbo">Turbo</label>
 				</fieldset>
 			</form>
 		</div>
 		
-		<!-- <div>
+		<div>
 			<a href="http://validator.w3.org/check/referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/5/w3c-xhtml.png" alt="Valid XHTML 1.1" /></a>
 			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/5/w3c-css.png" alt="Valid CSS" /></a>
 			<a href="https://webster.cs.washington.edu/jslint/?referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/5/jslint.png" alt="JavaScript Lint" /></a>
-		</div> -->
+		</div>
 	</body>
 </html>
