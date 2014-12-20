@@ -11,8 +11,6 @@
 *    Copyright (C) 2014 Eleven. All rights reserved.
 */
 
-var blankXPos = blankYPos = "300px"
-
 $ = function(obj) {
 	return document.getElementById(obj);
 };
@@ -20,51 +18,87 @@ $$ = function(selector) {
 	return document.querySelectorAll(selector);
 };
 
+var blankXPos = blankYPos = "300px" // 空白块的x/y位置
+var puzzlePieceList = null; // 存放所有拼图块的数组
+
 window.onload = function() {
-	// $("start_btn").addEventListener('click', showASCII);
 	initialization();
 };
 
 function initialization() {
-	var xPos = yPos = 0;
-	var puzzlePieceList = $$("#puzzlearea div");
+	var xPos_int = yPos_int = 0;
+	puzzlePieceList = $$("#puzzlearea div");
 	for (var i = 0; i < puzzlePieceList.length; i++) {
-		if (i && i % 4 == 0) yPos += 100;
 		puzzlePieceList[i].className = "puzzlepiece";
-		puzzlePieceList[i].style.left = xPos + "px";
-		puzzlePieceList[i].style.top = yPos + "px";
-		puzzlePieceList[i].style.backgroundPosition = (-xPos) + "px " + (-yPos) + "px";
-		xPos = (xPos + 100) % 400;
-		// puzzlePieceList[i].onmouseover =  isMovable;
+		puzzlePieceList[i].style.left = xPos_int + "px";
+		puzzlePieceList[i].style.top = yPos_int + "px";
+		puzzlePieceList[i].style.backgroundPosition = (-xPos_int) + "px " + (-yPos_int) + "px";
+		puzzlePieceList[i].style.transitionProperty = "left, top";
+		puzzlePieceList[i].style.transitionDuration = "0.5s";
 		puzzlePieceList[i].addEventListener('mouseover', isMovable);
+		xPos_int = (xPos_int + 100) % 400;
+		if ((i + 1) % 4 == 0) yPos_int += 100;
 	}
 }
 
-function isMovable() {
+function isMovable() { // 判断拼图块是否能移动
 	var xPos = this.style.left;
 	var yPos = this.style.top;
-	if (xPos == blankXPos || yPos == blankYPos) {
+	if (xPos == blankXPos || yPos == blankYPos) { // 拼图块能移动，因为和空白块同行或同列
 		this.className += " movablepiece";
 		this.addEventListener('click', movePieces);
 	} else {
 		this.className = "puzzlepiece";
+		this.removeEventListener('click', movePieces);
 	}
 }
 
-function movePieces() {
-	// alert(1);
-	toBlank(this);
+function movePieces() { // 一次移动一个或多个拼图块
+	var xPos_int = parseInt(this.style.left);
+	var yPos_int = parseInt(this.style.top);
+	var blankXPos_int = parseInt(blankXPos);
+	var blankYPos_int = parseInt(blankYPos);
+	if (xPos_int == blankXPos_int) { // 拼图块和空白块同列的情况
+		var foo = yPos_int > blankYPos_int ? 100 : -100;
+		do {
+			piece = getPieceByXY(xPos_int, blankYPos_int + foo);
+			toBlank(piece);
+			blankYPos_int += foo;
+		} while (blankYPos_int != yPos_int)
+	} else { // 拼图块和空白块同行的情况
+		var foo = xPos_int > blankXPos_int ? 100 : -100;
+		do {
+			piece = getPieceByXY(blankXPos_int + foo, yPos_int);
+			toBlank(piece);
+			blankXPos_int += foo;
+		} while (blankXPos_int != xPos_int)
+	}
 }
 
-function toBlank(obj) {
-	obj.style.transition = "all 0.5s";
-	var xPos = obj.style.left;
-	var yPos = obj.style.top;
-	obj.style.left = blankXPos;
-	obj.style.top = blankYPos;
+function toBlank(piece) { // 将这个拼图块和空白块的位置互换
+	var xPos = piece.style.left;
+	var yPos = piece.style.top;
+	piece.style.left = blankXPos;
+	piece.style.top = blankYPos;
 	blankXPos = xPos;
 	blankYPos = yPos;
 }
+
+function getPieceByXY(xPos_int, yPos_int) { // 根据x/y位置得到相对应的拼图块
+	for (i = 0; i < puzzlePieceList.length; i++) {
+		if (parseInt(puzzlePieceList[i].style.left) == xPos_int &&
+			parseInt(puzzlePieceList[i].style.top) == yPos_int)
+			return puzzlePieceList[i];
+	}
+	return null;
+}
+
+
+
+
+
+
+
 
 
 
