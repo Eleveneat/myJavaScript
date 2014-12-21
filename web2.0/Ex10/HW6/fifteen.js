@@ -20,17 +20,24 @@ $$ = function(selector) {
 
 var blankXPos = blankYPos = "300px" // 空白块的x/y位置
 var puzzlePieceList = null; // 存放所有拼图块的数组
+var picList = ["0.jpg", "1.jpg", "2.jpg", "3.jpg"]; // 存放图片名称的数组
 
 window.onload = function() {
 	initialization();
+	$("shufflebutton").addEventListener('click', function() {
+		timer = setInterval(shuffle,10);
+		setTimeout(function(){clearInterval(timer);}, 3000);
+	});
 };
 
 function initialization() {
 	var xPos_int = yPos_int = 0;
 	puzzlePieceList = $$("#puzzlearea div");
+	picNum = Math.floor(Math.random() * 4);
 	for (var i = 0; i < puzzlePieceList.length; i++) {
 		puzzlePieceList[i].className = "puzzlepiece";
 		puzzlePieceList[i].style.left = xPos_int + "px";
+		puzzlePieceList[i].style.backgroundImage = "url(pic/" + picList[picNum] + ")";
 		puzzlePieceList[i].style.top = yPos_int + "px";
 		puzzlePieceList[i].style.backgroundPosition = (-xPos_int) + "px " + (-yPos_int) + "px";
 		puzzlePieceList[i].style.transitionProperty = "left, top";
@@ -73,6 +80,10 @@ function movePieces() { // 一次移动一个或多个拼图块
 			blankXPos_int += foo;
 		} while (blankXPos_int != xPos_int)
 	}
+	isFinish();
+}
+function isFinish() {
+
 }
 
 function toBlank(piece) { // 将这个拼图块和空白块的位置互换
@@ -91,6 +102,20 @@ function getPieceByXY(xPos_int, yPos_int) { // 根据x/y位置得到相对应的
 			return puzzlePieceList[i];
 	}
 	return null;
+}
+
+// var selectNum = 0;
+function shuffle() {
+	var xPos = yPos = null, randomNum = 0;
+	while (xPos != blankXPos && yPos != blankYPos) {
+		randomNum = Math.floor(Math.random() * 15);
+		var xPos = puzzlePieceList[randomNum].style.left;
+		var yPos = puzzlePieceList[randomNum].style.top;
+	}
+	// selectNum = randomNum;
+	puzzlePieceList[randomNum].addEventListener('click', movePieces);
+	puzzlePieceList[randomNum].click();
+	puzzlePieceList[randomNum].removeEventListener('click', movePieces);
 }
 
 
