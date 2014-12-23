@@ -52,6 +52,8 @@ window.onload = function() {
 		initialization();
 		BeFinishedStyle();
 		blankXPos = blankYPos = "300px";
+		clearInterval(playingTimer); // 清除上一次的计时
+		$("totalTime").innerHTML = 0;
 	});
 };
 
@@ -88,8 +90,8 @@ function BeFinishedStyle() { // 所有拼图块处于正确位置时的样式（
 function displayTimeAndStep() { // 在网页上显示游戏中的时间、步数、最佳游戏时间和最佳游戏步数
 	$("overall").innerHTML += "Time:  <span id='totalTime'>0</span> s<br>"
 						+ "Move:  <span id='totalMoveNum'>0</span><br>"
-						+ "The Best Time: <span id='bestTime'>0</span> s<br>"
-						+ "The Best Move:  <span id='bestMoveNum'>0</span><br>";
+						+ "The Best Time: <span id='bestTime'>None</span> s<br>"
+						+ "The Best Move:  <span id='bestMoveNum'>None</span><br>";
 }
 
 function addSelectBackground() { // 在网页上增加背景图片的选择
@@ -144,18 +146,18 @@ function movePieces() { // 一次移动一个或多个拼图块
 			blankXPos_int += foo;
 		} while (blankXPos_int != xPos_int)
 	}
-	if (!isShuffling) {
+	if (!isShuffling) { // 如果不处于洗牌状态
 		totalMoveNum += 1;
 		$("totalMoveNum").innerHTML = totalMoveNum;
-	}
-	if (!isShuffling && isFinish()) { // 如果不处于洗牌状态且所有拼图块位于正确的位置
-		BeFinishedStyle();
-		if (bestTime > totalTime)
-			$("bestTime").innerHTML = bestTime = totalTime;
-		if (bestMoveNum > totalMoveNum)
-			$("bestMoveNum").innerHTML = bestMoveNum = totalMoveNum;
-		clearInterval(playingTimer);
-		alert("Victory!");
+		if (isFinish()) { // 如果所有拼图块位于正确的位置，游戏结束
+			BeFinishedStyle();
+			if (bestTime > totalTime)
+				$("bestTime").innerHTML = bestTime = totalTime;
+			if (bestMoveNum > totalMoveNum)
+				$("bestMoveNum").innerHTML = bestMoveNum = totalMoveNum;
+			clearInterval(playingTimer);
+			alert("Victory!");
+		}
 	}
 }
 
@@ -194,13 +196,3 @@ function countTime() { // 记录且显示游戏进行的时间
 	totalTime += 1;
 	$("totalTime").innerHTML = totalTime;
 }
-
-
-
-
-
-
-
-
-
-
