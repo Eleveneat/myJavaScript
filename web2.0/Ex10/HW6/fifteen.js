@@ -6,7 +6,7 @@
 *                 4. 能一次移动多个拼图块。
 *                 5. 能纪录游戏时间与步数。
 *                 6. 能选择不同的背景。
-*    Last modified: 2014-12-22 15:58
+*    Last modified: 2014-12-23 15:58
 *
 *    Created by Eleven on 2014-12-18
 *    Email: eleveneat@gmail.com
@@ -60,8 +60,6 @@ window.onload = function() {
 function initialization() { // 初始化所有的拼图块
 	var xPos_int = yPos_int = 0;
 	puzzlePieceList = $$("#puzzlearea div");
-	// picNum = Math.floor(Math.random() * 4); // 随机选择一张背景图
-	// alert($("team").value);
 	for (var i = 0; i < puzzlePieceList.length; i++) {
 		if (puzzlePieceList[i].innerHTML == "")
 			puzzlePieceList[i].innerHTML = i + 1;
