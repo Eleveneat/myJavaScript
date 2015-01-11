@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var blankXPos = blankYPos = "300px", var puzzlePieceList = null, var isShuffling = false;
+	var blankXPos = blankYPos = "300px", puzzlePieceList = null, isShuffling = false;
 	initialization(); BeFinishedStyle();
 	$("#shufflebutton").click(function() {
 		if (isFinish()) initialization();
@@ -72,9 +72,9 @@ $(document).ready(function(){
 				toBlank(piece); blankXPos_int += foo;
 			} while (blankXPos_int != xPos_int)
 		}
-		if (!isShuffling) // 如果不处于洗牌状态
-			if (isFinish()) // 如果所有拼图块位于正确的位置，游戏结束
-				BeFinishedStyle(); alert("Victory!");
+		if (!isShuffling) {// 如果不处于洗牌状态
+			if (isFinish()) {// 如果所有拼图块位于正确的位置，游戏结束
+				BeFinishedStyle(); alert("Victory!");}}
 	}
 	function toBlank(piece) { // 将这个拼图块和空白块的位置互换
 		var xPos = piece.style.left, yPos = piece.style.top;
