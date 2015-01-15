@@ -1,0 +1,4 @@
+name: sysugraffiti
+version: 1
+
+worker: tornado

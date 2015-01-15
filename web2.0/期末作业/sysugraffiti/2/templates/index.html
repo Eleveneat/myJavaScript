@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Business Casual - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ static_url("css/bootstrap.min.css") }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{  static_url("css/business-casual.css")}}" rel="stylesheet">
+
+    <link href="{{  static_url("css/paint.css") }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">一起涂鸦吧／在线涂鸦</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">在线涂鸦</a>
+                    </li>
+                    <li>
+                        <a href="about.html">随便看看</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">热门活动</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">个人中心</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                    <div class="top">
+                        <div id="color">
+                            <button class="btn btn-primary" type="button">
+                             画笔颜色：</button>
+                            
+                            <input class="i1" type="button" value="" />
+                            <input class="i2" type="button" value="" />
+                            <input class="i3" type="button" value="" />
+                            <input class="i4" type="button" value="" />
+                            <input class="i5" type="button" value="" />
+                            <input class="i6" type="button" value="" />
+                            <!-- <input class="i7" type="button" value="" /> -->
+                            <!-- <input class="i8" type="button" value="" /> -->
+                            <!-- <input class="i9" type="button" value="" /> -->
+                        </div>
+                        <div class="font" id="font">
+                            <button class="btn btn-primary" type="button">
+                             画笔宽度：</button>
+                            <input type="button" value="细" />
+                            <input type="button" value="中" class="grea"/>
+                            <input type="button" value="粗" />
+                        </div>
+                        <div>
+                            <span id="error">橡皮擦：</span>
+                            <input id="eraser" style="width:60px;font-size:14px;"type="button" value="橡皮擦" />
+                        </div>
+                  <input id="clear" type="button" value="清除画布" style="width:80px;"/>
+                  <input id="revocation" type="button" value="撤销" style="width:80px;"/> <!-- 这个撤销好像没起作用, 把它改成“完成”？ -->
+                  <input id="imgurl" type="button" value="导出图片路径" style="width:80px;"/>
+                    </div>
+                    <canvas id="canvas" width="280" height="260">您的浏览器不支持 canvas 标签</canvas>
+                  <input id="tijiao" type="button" value="提交" style="width:80px;"/>
+                  <input id="fenxiang" type="button" value="分享" style="width:80px;"/>
+                    <!-- <div id="div1"></div> -->
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="{{static_url("js/jquery.js") }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{static_url("js/bootstrap.min.js") }}"></script>
+
+    <!-- 这是关于canvas的代码 -->
+    <script src="{{static_url("js/paint.js") }}"></script>
+
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+<script>
+
+</script>
+
+</body>
+
+</html>

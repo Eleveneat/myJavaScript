@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>一起涂鸦吧</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ static_url("css/bootstrap.min.css") }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ static_url("css/business-casual.css") }}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">一起涂鸦吧／随便看看</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">在线涂鸦</a>
+                    </li>
+                    <li>
+                        <a href="about.html">随便看看</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">热门活动</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">个人中心</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">EXHIBITION
+                        <strong>作品欣赏</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive img-border-left" src="{{static_url("img/4.jpg")}}" alt="">
+                </div>
+                <div class="col-md-6">
+                    <small>
+                    <p>艺术并不是真理。艺术是谎言，然而这种谎言能教育我们去认识真理。——毕加索</p>
+                    <p>绘画有两种：一种为物质的，一为精神的。——康定斯基</p>
+                    <p>所谓大师，就是这样的人：他们用自己的眼睛去看别人见过的东西，在别人司空见惯的东西上能够发现出美来。——罗丹</p></small>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">大师
+                        <strong>作品</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="{{static_url("img/1.jpg")}}" alt="">
+                    <h3>John Smith <button type="button" class="btn btn-info" onclick='chgColor(this)'>赞</button>
+                    </h3>
+
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="{{static_url("img/2.jpg")}}" alt="">
+                    <h3>Edmund
+                        <button type="button" class="btn btn-info" onclick='chgColor(this)'>赞</button>
+                    </h3>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="{{static_url("img/3.jpg")}}" alt="">
+                    <h3>Frederic
+                        <button type="button" class="btn btn-info" onclick='chgColor(this)'>赞</button>
+                    </h3>
+                </div>
+                 <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="{{static_url("img/5.jpg")}}" alt="">
+                    <h3>Hamiltion
+                        <button type="button" class="btn btn-info" onclick='chgColor(this)'>赞</button>
+                    </h3>
+                </div>
+                 <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="{{static_url("img/6.jpg")}}" alt="">
+                    <h3>Jonathan
+                        <button type="button" class="btn btn-info" onclick='chgColor(this)'>赞</button>
+                    </h3>
+                </div>
+                 <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="{{static_url("img/7.jpg")}}" alt="" onclick='chgColor(this)'>
+                    <h3>Kenneth
+                        <button type="button" class="btn btn-info" onclick='chgColor(this)'>赞</button>
+                    </h3>
+                </div>
+                 <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="{{static_url("img/8.jpg")}}" alt="">
+                    <h3>Magee
+                        <button type="button" class="btn btn-info" onclick='chgColor(this)'>赞</button>
+                    </h3>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; 一起涂鸦吧 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{static_url("js/jquery.js")}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{static_url("js/bootstrap.min.js")}}"></script>
+    <script type="text/javascript"> function chgColor(_this) {_this.style.backgroundColor='red'; }
+    </script>
+</body>
+
+</html>
