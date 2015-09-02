@@ -1,0 +1,46 @@
+<!-- 
+   Filename: leaderboard.html
+   Description: NULL
+   Last modified: 2015-09-02 15:47
+
+   Created by Eleveneat on 2015-09-02
+   Email: eleveneat@gmail.com
+   Copyright (C) 2015 Eleveneat. All rights reserved. 
+-->
+
+
+<head>
+	<title>Leaderboard</title>
+</head>
+<body>
+<h1>Leaderboard</h1>
+
+{{> loginButtons}}
+{{> leaderboard}}
+
+</body>
+
+<template name="leaderboard">
+	{{#each player}}
+	    <li class="player {{selectedClass}}">{{name}}: {{score}}</li>
+	{{/each}}
+
+	{{#if showSelectedPlayer}}
+		<li>Selected Player: {{showSelectedPlayer.name}}</li>
+	{{/if}}
+
+	<input type="button" class="increment" value="Give 5 Points">
+	<input type="button" class="decrement" value="Take 5 Points">
+	<input type="button" class="remove" value="Remove Player">
+
+	{{> addPlayerForm}}
+</template>
+
+<template name="addPlayerForm">
+	{{#if currentUser}}
+		<form>
+			<input type="text" name="playerName">
+			<input type="submit" value="Add Player">
+		</form>
+	{{/if}}
+</template>

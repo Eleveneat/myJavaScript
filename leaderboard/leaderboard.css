@@ -1,0 +1,15 @@
+/*
+*    Filename: leaderboard.css
+*    Description: NULL
+*    Last modified: 2015-09-02 15:48
+*
+*    Created by Eleveneat on 2015-09-02
+*    Email: eleveneat@gmail.com
+*    Copyright (C) 2015 Eleveneat. All rights reserved.
+*/
+
+/* CSS declarations go here */
+
+.selected {
+	background-color: yellow;
+}
